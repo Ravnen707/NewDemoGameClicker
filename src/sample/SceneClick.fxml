@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+    <Tab text="Untitled Tab 1">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="click1" layoutX="31.0" layoutY="95.0" mnemonicParsing="false" onAction="#clickOnAction">
+                     <graphic>
+                        <ImageView fx:id="normalBtn" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../money/download.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Label fx:id="point" layoutX="125.0" layoutY="50.0" text="0" />
+                  <Button fx:id="buff" layoutX="345.0" layoutY="67.0" mnemonicParsing="false" onAction="#clickOnAction" onMouseEntered="#besked" onMouseExited="#beskedE" text="+5 click buff" />
+                  <Button fx:id="buffFifty" layoutX="349.0" layoutY="131.0" mnemonicParsing="false" onAction="#clickOnAction" text="+50 click buff" />
+                  <Button fx:id="buffFiveH" layoutX="346.0" layoutY="192.0" mnemonicParsing="false" onAction="#clickOnAction" text="+500 click buff" />
+                  <Button fx:id="buffFiveT" layoutX="343.0" layoutY="257.0" mnemonicParsing="false" onAction="#clickOnAction" text="+5000 click buff" />
+                  <Label layoutX="118.0" layoutY="26.0" text="Income!" />
+                  <Label fx:id="buffLabel" layoutX="344.0" layoutY="42.0" text="Label" />
+                  <Label layoutX="344.0" layoutY="103.0" text="Label" />
+                  <Label layoutX="344.0" layoutY="169.0" text="Label" />
+                  <Label layoutX="344.0" layoutY="231.0" text="Label" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Untitled Tab 2">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="86.0" fitWidth="128.0" layoutX="33.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="86.0" fitWidth="128.0" layoutX="33.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="86.0" fitWidth="128.0" layoutX="33.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="182.0" layoutY="71.0" text="Normal idea" />
+                  <Label layoutX="182.0" layoutY="171.0" text="great idea!" />
+                  <Label layoutX="182.0" layoutY="265.0" text="UNFATHOMABLE GREAT IDEA!" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
