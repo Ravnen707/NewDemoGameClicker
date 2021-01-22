@@ -2,94 +2,65 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.input.DragEvent;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import javax.imageio.plugins.tiff.ExifInteroperabilityTagSet;
+import java.io.IOException;
 
 
 public class Controller {
     @FXML
-    public Button click1;
+    public Button incomeGame;
     @FXML
-    public Button buff;
+    public Button hANDm;
     @FXML
-    public Button buffFifty;
+    public Button setting;
     @FXML
-    public Button buffFiveH;
-    @FXML
-    public Button buffFiveT;
-    @FXML
-    Label point;
-    @FXML
-    Label buffLabel;
-    int buy1 = 1;
-    public void initialize() {
-        buff.setDisable(true);
-        buffFifty.setDisable(true);
-        buffFiveH.setDisable(true);
-        buffFiveT.setDisable(true);
-    }
-@FXML
-    public void clickOnAction(ActionEvent event) {
+    public TextField SearchBar;
 
-        if (event.getSource().equals(click1)) {
-            int p1 = Integer.parseInt(point.getText());
-            point.setText(String.valueOf(p1 + buy1));
+    public void searchOnAction(ActionEvent actionEvent) throws Exception {
+        String search = SearchBar.getText(); // text fra textfield.
+        int numbers = Integer.parseInt(search); // lavet om til en "int".
+        switch (numbers) { // Start på Switch.
+            case 1:
+                Stage oldstage = (Stage) SearchBar.getScene().getWindow();
+                oldstage.close();
+                Parent root = FXMLLoader.load(getClass().getResource("SceneClick.fxml")); // kalder efter rigtige GUI.
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.show(); // Laver en ny Scene.
+                break;
+            case 2:
 
-
-        } else if (event.getSource().equals(buff)) {
-            int p5 = Integer.parseInt(point.getText());
-            point.setText(String.valueOf(p5 - 5));
-
-        } else if (event.getSource().equals(buffFifty)) {
-            int p50 = Integer.parseInt(point.getText());
-            point.setText(String.valueOf(p50 - 10));
-
-        } else if (event.getSource().equals(buffFiveH)) {
-            int p500 = Integer.parseInt(point.getText());
-            point.setText(String.valueOf(p500 - 100));
-
-        } else if (event.getSource().equals(buffFiveT)) {
-            int p5000 = Integer.parseInt(point.getText());
-            point.setText(String.valueOf(p5000 - 1000));
-        }
-
-        if (Integer.parseInt(point.getText()) > 5 ) {
-            buff.setDisable(false);
-            buy1 = 5;
-
-        } else {
-            buff.setDisable(true);
-        }
-
-        if (Integer.parseInt(point.getText()) > 49) {
-            buffFifty.setDisable(false);
-            buy1 = 10;
-        } else {
-            buffFifty.setDisable(true);
-        }
-
-        if (Integer.parseInt(point.getText()) > 199) {
-            buffFiveH.setDisable(false);
-            buy1 = 100;
-        } else {
-            buffFiveH.setDisable(true);
-        }
-
-        if (Integer.parseInt(point.getText()) > 1999) {
-            buffFiveT.setDisable(false);
-            buy1 = 1000;
-        } else {
-            buffFiveT.setDisable(true);
+                break;
+            case 3:
+                break;
         }
     }
 
-    public void besked() {
-        buffLabel.setText("I cost ya mom!");
-
+    public void incomeOnAction(ActionEvent actionEvent) {
+    }
+    @FXML
+    public void helpOnAction() {
+    }
+    @FXML
+    public void settingOnAction() {
     }
 
-    public void beskedE() {
-        buffLabel.setText("");
-    }
+
+
+
+//    Parent root = FXMLLoader.load(getClass().getResource("SceneClick.fxml")); // kalder efter rigtige GUI.
+//    Stage stage = new Stage();
+//        stage.setScene(new Scene(root));
+//        stage.show();
+
+
+
 }
+
