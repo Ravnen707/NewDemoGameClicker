@@ -45,6 +45,7 @@ public class Controller2 {
         buffFifty.setVisible(false);
         buffFiveH.setVisible(false);
         buffFiveT.setVisible(false);
+        checkpoints();
     }
     @FXML
     public void clickOnAction(ActionEvent event) {
@@ -136,6 +137,7 @@ public class Controller2 {
     }
 
     public void loopOnAction() {
+
                 Timer time = new Timer();
                 time.scheduleAtFixedRate(new TimerTask() {
                     public void run() {
@@ -187,10 +189,24 @@ public class Controller2 {
                 Platform.runLater(new Runnable() {
                     @Override
                     public void run() {
+                        int ppp = Integer.parseInt(point.getText());
+                        if (ppp >= 5) {
+                            buff.setDisable(false);
+                            buff.setVisible(true);}
+                        if (ppp >= 50) {
+                            buffFifty.setDisable(false);
+                            buffFifty.setVisible(true);}
+                        if (ppp >= 200) {
+                            buffFiveH.setDisable(false);
+                            buffFiveH.setVisible(true);}
+                        if (ppp >= 2000) {
+                            buffFiveT.setDisable(false);
+                            buffFiveT.setVisible(true);}
                     }
                 });
             }
-        },0,8500;
-    }
+        },0,500);
+        }
+
 
 }
