@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IncomeClicker.Controller2">
   <tabs>
     <Tab text="IncomeClikerV.1">
       <content>
@@ -53,6 +53,7 @@
                   <Label fx:id="buffLabel1" layoutX="344.0" layoutY="103.0" prefHeight="17.0" prefWidth="210.0" />
                   <Label fx:id="buffLabel2" layoutX="344.0" layoutY="169.0" prefHeight="17.0" prefWidth="142.0" />
                   <Label fx:id="buffLabel3" layoutX="344.0" layoutY="231.0" prefHeight="17.0" prefWidth="168.0" />
+                  <Button fx:id="backmenu" layoutX="534.0" layoutY="332.0" mnemonicParsing="false" onAction="#backMenu" text="Button" />
                </children></AnchorPane>
       </content>
     </Tab>
@@ -60,15 +61,32 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="86.0" fitWidth="128.0" layoutX="33.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fitHeight="86.0" fitWidth="128.0" layoutX="33.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fitHeight="86.0" fitWidth="128.0" layoutX="33.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label layoutX="182.0" layoutY="71.0" text="Normal idea" />
-                  <Label layoutX="182.0" layoutY="171.0" text="great idea!" />
-                  <Label layoutX="182.0" layoutY="265.0" text="UNFATHOMABLE GREAT IDEA!" />
-                  <Button layoutX="440.0" layoutY="67.0" mnemonicParsing="false" onAction="#loopOnAction" text="Button" />
-                  <Button layoutX="440.0" layoutY="167.0" mnemonicParsing="false" onAction="#loopOnAction1" text="Button" />
-                  <Button layoutX="440.0" layoutY="261.0" mnemonicParsing="false" onAction="#loopOnAction2" text="Button" />
+                  <ImageView fitHeight="372.0" fitWidth="600.0">
+                     <image>
+                        <Image url="@../BrainPower/frame-with-money-american-hundred-dollar-bills-with-white-isolated_137678-12.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="196.0" layoutY="72.0" text="Normal idea" />
+                  <Label layoutX="200.0" layoutY="171.0" text="great idea!" />
+                  <Label layoutX="182.0" layoutY="275.0" text="UNFATHOMABLE GREAT IDEA!" />
+                  <Button layoutX="364.0" layoutY="68.0" mnemonicParsing="false" onAction="#loopOnAction" text="Button" />
+                  <Button layoutX="364.0" layoutY="173.0" mnemonicParsing="false" onAction="#loopOnAction1" text="Button" />
+                  <Button layoutX="364.0" layoutY="271.0" mnemonicParsing="false" onAction="#loopOnAction2" text="Button" />
+                  <ImageView fitHeight="106.0" fitWidth="121.0" layoutX="26.0" layoutY="14.0">
+                     <image>
+                        <Image url="@../BrainPower/ooftai3q299rfdpqr21k_400x400.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="114.0" fitWidth="162.0" layoutX="17.0" layoutY="241.0">
+                     <image>
+                        <Image url="@../BrainPower/brain-universe.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="99.0" fitWidth="150.0" layoutX="23.0" layoutY="130.0">
+                     <image>
+                        <Image url="@../BrainPower/5x8mcco02mi21.jpg" />
+                     </image>
+                  </ImageView>
                </children></AnchorPane>
       </content>
     </Tab>

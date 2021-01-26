@@ -1,17 +1,24 @@
-package sample;
+package IncomeClicker;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
 
 public class Controller2 {
-
     @FXML
     public Button click1;
     @FXML
@@ -32,11 +39,13 @@ public class Controller2 {
     Label buffLabel2;
     @FXML
     Label buffLabel3;
-
-
-
+    String ssound = new File("src/money/Cash_Register_Sound_Effect-AudioTrimmer.com.mp3").toURI().toString();
+    private MediaPlayer background;
+    String ssound1 = new File("src/money/Magic Glitter - Fairy Dust Sound Effect.mp3").toURI().toString();
+    public Button backmenu;
     int buy1 = 1;
-    public void initialize() {
+
+    public void initialize() { //alt det der sker herinde åbner lige så snart denne stage bliver åbnet.
         buff.setDisable(true);
         buffFifty.setDisable(true);
         buffFiveH.setDisable(true);
@@ -46,14 +55,24 @@ public class Controller2 {
         buffFiveH.setVisible(false);
         buffFiveT.setVisible(false);
         checkpoints();
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                background = new MediaPlayer(new Media(ssound1));
+                background.play();
+            }
+        });
+        thread.start();
     }
+
     @FXML
     public void clickOnAction(ActionEvent event) {
 
         if (event.getSource().equals(click1)) {
             int p1 = Integer.parseInt(point.getText());
             point.setText(String.valueOf(p1 + buy1));
-
+            MediaPlayer noise = new MediaPlayer( new Media(ssound));
+            noise.play();
 
         } else if (event.getSource().equals(buff)) {
             int p5 = Integer.parseInt(point.getText());
@@ -79,33 +98,33 @@ public class Controller2 {
             buy1 = buy1 + 1000;
         }
 
-        if (Integer.parseInt(point.getText()) < 5 ) {
-            buff.setVisible(false);
-        } else {
-            buff.setDisable(false);
-            buff.setVisible(true);
-        }
+//        if (Integer.parseInt(point.getText()) < 5 ) { Bruger det ikke længere da det bliver brugt optimalt nede i "checkpoints" thread.
+//            buff.setVisible(false);                   Men i starten brugte jeg koden her til at holde styr på knapperne og pointsne.
+//        } else {
+//            buff.setDisable(false);
+//            buff.setVisible(true);
+//        }
 
-        if (Integer.parseInt(point.getText()) < 49) {
-            buffFifty.setVisible(false);
-        } else {
-            buffFifty.setDisable(false);
-            buffFifty.setVisible(true);
-        }
+//        if (Integer.parseInt(point.getText()) < 49) {
+//            buffFifty.setVisible(false);
+//        } else {
+//            buffFifty.setDisable(false);
+//            buffFifty.setVisible(true);
+//        }
 
-        if (Integer.parseInt(point.getText()) < 199) {
-            buffFiveH.setVisible(false);
-        } else {
-            buffFiveH.setDisable(false);
-            buffFiveH.setVisible(true);
-        }
+//        if (Integer.parseInt(point.getText()) < 199) {
+//            buffFiveH.setVisible(false);
+//        } else {
+//            buffFiveH.setDisable(false);
+//            buffFiveH.setVisible(true);
+//        }
 
-        if (Integer.parseInt(point.getText()) < 1999) {
-            buffFiveT.setVisible(false);
-        } else {
-            buffFiveT.setDisable(false);
-            buffFiveT.setVisible(true);
-        }
+//        if (Integer.parseInt(point.getText()) < 1999) {
+//            buffFiveT.setVisible(false);
+//        } else {
+//            buffFiveT.setDisable(false);
+//            buffFiveT.setVisible(true);
+//        }
     }
 
     public void besked() {
@@ -193,20 +212,43 @@ public class Controller2 {
                         if (ppp >= 5) {
                             buff.setDisable(false);
                             buff.setVisible(true);}
+                        else {
+                        buff.setDisable(true);
+                           buff.setVisible(false);}
                         if (ppp >= 50) {
                             buffFifty.setDisable(false);
                             buffFifty.setVisible(true);}
+                        else {
+                            buffFifty.setDisable(true);
+                            buffFifty.setVisible(false);
+                        }
                         if (ppp >= 200) {
                             buffFiveH.setDisable(false);
                             buffFiveH.setVisible(true);}
+                        else {
+                            buffFiveH.setDisable(true);
+                            buffFiveH.setVisible(false);
+                        }
                         if (ppp >= 2000) {
                             buffFiveT.setDisable(false);
                             buffFiveT.setVisible(true);}
+                        else {
+                            buffFiveT.setDisable(true);
+                            buffFiveT.setVisible(false);
+                        }
                     }
                 });
             }
-        },0,500);
+        },0,50);
         }
 
-
+    public void backMenu(ActionEvent actionEvent) throws IOException {
+        Stage oldstage1 = (Stage) backmenu.getScene().getWindow();
+        oldstage1.close();  // lukker gammel scene ned
+        Parent root1 = FXMLLoader.load(getClass().getResource("/sample/GameMenu.fxml")); // kalder efter rigtige GUI.
+        Stage stage1 = new Stage();
+        stage1.setScene(new Scene(root1));
+        stage1.show(); // Laver en ny Scene.
+        background.stop();
+    }
 }
