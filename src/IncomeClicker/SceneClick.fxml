@@ -41,10 +41,10 @@
                         </ImageView>
                      </graphic></Button>
                   <Label fx:id="point" layoutX="125.0" layoutY="50.0" text="0" />
-                  <Button fx:id="buff" layoutX="345.0" layoutY="67.0" mnemonicParsing="false" onAction="#clickOnAction" onMouseEntered="#besked" onMouseExited="#beskedE" text="+5 click buff" />
-                  <Button fx:id="buffFifty" layoutX="349.0" layoutY="131.0" mnemonicParsing="false" onAction="#clickOnAction" onMouseEntered="#besked1" onMouseExited="#beskedE1" text="+10 click buff" />
-                  <Button fx:id="buffFiveH" layoutX="346.0" layoutY="192.0" mnemonicParsing="false" onAction="#clickOnAction" onMouseEntered="#besked2" onMouseExited="#beskedE2" text="+100 click buff" />
-                  <Button fx:id="buffFiveT" layoutX="343.0" layoutY="257.0" mnemonicParsing="false" onAction="#clickOnAction" onMouseEntered="#besked3" onMouseExited="#beskedE3" text="+1000 click buff" />
+                  <Button fx:id="buff" layoutX="345.0" layoutY="67.0" mnemonicParsing="false" onAction="#clickOnAction" onMouseEntered="#besked" onMouseExited="#beskedE" text="+5 Idea" />
+                  <Button fx:id="buffFifty" layoutX="349.0" layoutY="131.0" mnemonicParsing="false" onAction="#clickOnAction" onMouseEntered="#besked1" onMouseExited="#beskedE1" text="+10 Idea" />
+                  <Button fx:id="buffFiveH" layoutX="346.0" layoutY="192.0" mnemonicParsing="false" onAction="#clickOnAction" onMouseEntered="#besked2" onMouseExited="#beskedE2" text="+100 Idea" />
+                  <Button fx:id="buffFiveT" layoutX="343.0" layoutY="257.0" mnemonicParsing="false" onAction="#clickOnAction" onMouseEntered="#besked3" onMouseExited="#beskedE3" text="+1000 Idea" />
                   <Label layoutX="92.0" layoutY="29.0" text="Income!">
                      <font>
                         <Font name="Broadway" size="18.0" />
@@ -53,7 +53,7 @@
                   <Label fx:id="buffLabel1" layoutX="344.0" layoutY="103.0" prefHeight="17.0" prefWidth="210.0" />
                   <Label fx:id="buffLabel2" layoutX="344.0" layoutY="169.0" prefHeight="17.0" prefWidth="142.0" />
                   <Label fx:id="buffLabel3" layoutX="344.0" layoutY="231.0" prefHeight="17.0" prefWidth="168.0" />
-                  <Button fx:id="backmenu" layoutX="534.0" layoutY="332.0" mnemonicParsing="false" onAction="#backMenu" text="Button" />
+                  <Button fx:id="backmenu" layoutX="534.0" layoutY="332.0" mnemonicParsing="false" onAction="#backMenu" text="Menu" />
                </children></AnchorPane>
       </content>
     </Tab>

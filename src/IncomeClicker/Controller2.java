@@ -135,21 +135,21 @@ public class Controller2 {
     }
 
     public void besked1() {
-        buffLabel1.setText("Go home and sleep");
+        buffLabel1.setText("I cost 10$!");
     }
     public void beskedE1() {
         buffLabel1.setText("");
     }
 
     public void besked2() {
-        buffLabel2.setText("Narh");
+        buffLabel2.setText("I cost 100!");
     }
     public void beskedE2() {
         buffLabel2.setText("");
     }
 
     public void besked3() {
-        buffLabel3.setText("Narhhhhh Biatch");
+        buffLabel3.setText("I cost 1000$!");
     }
     public void beskedE3() {
         buffLabel3.setText("");
