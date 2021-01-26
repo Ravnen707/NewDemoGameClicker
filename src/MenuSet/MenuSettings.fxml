@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuSet.Controller">
+   <children>
+      <TextField fx:id="NrHelp" layoutX="14.0" layoutY="50.0" onAction="#SearchNr" />
+      <Label layoutX="356.0" layoutY="87.0" text="1. How to Play IcomeClicker." />
+      <Label layoutX="356.0" layoutY="112.0" text="2. Meaning of IncomeClicker." />
+      <TextArea fx:id="ShowNr" layoutX="14.0" layoutY="87.0" prefHeight="306.0" prefWidth="292.0" />
+      <Label layoutX="356.0" layoutY="138.0" text="3. Future game (Risky Ivestor)." />
+      <Label layoutX="356.0" layoutY="163.0" text="4. Future plan on all of it." />
+      <Label layoutX="14.0" layoutY="14.0" text="Click in the number you want to know and click &quot;ENTER&quot;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="backmenu" layoutX="534.0" layoutY="361.0" mnemonicParsing="false" onAction="#backMenu" text="Menu" />
+   </children>
+</AnchorPane>
