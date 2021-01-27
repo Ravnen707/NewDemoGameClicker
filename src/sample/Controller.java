@@ -46,6 +46,15 @@ public class Controller {
                 stage2.setScene(new Scene(root2));
                 stage2.show(); // Laver en ny Scene.
                 break;
+            case 4:
+                Stage oldstage3 = (Stage) SearchBar.getScene().getWindow();
+                oldstage3.close(); // lukker gammel scene ned
+                Parent root3 = FXMLLoader.load(getClass().getResource("/ChilasDipo/code/sample.fxml")); // kalder efter rigtige GUI.
+                Stage stage3 = new Stage();
+                stage3.setScene(new Scene(root3));
+                stage3.show(); // Laver en ny Scene.
+                break;
+
         }
     }
 }

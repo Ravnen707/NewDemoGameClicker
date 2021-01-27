@@ -9,7 +9,7 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-      //            <Button fx:id="mainClick" layoutX="37.0" layoutY="75.0" mnemonicParsing="false" onAction="#clickOnAction" text="Button" />
+      //            <Button fx:id="mainClick" layoutX="37.0" layoutY="75.0" mnemonicParsing="false" text="Button" />
                   <Label fx:id="points" layoutX="37.0" layoutY="23.0" text="Points" />
                </children></AnchorPane>
       </content>
