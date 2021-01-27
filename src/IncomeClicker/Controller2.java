@@ -56,6 +56,27 @@ public class Controller2 {
         buffFiveT.setVisible(false);
         checkpoints();
         Thread thread = new Thread(new Runnable() {
+           @Override
+            public void run() {
+                background = new MediaPlayer(new Media(ssound1));
+                background.play();
+            }
+        });
+        thread.start();
+    }
+    public void muteOnAction(ActionEvent actionEvent) {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                background = new MediaPlayer(new Media(ssound1));
+                background.setVolume(0);
+            }
+        });
+        thread.start();
+    }
+
+    public void unmuteOnAction(ActionEvent actionEvent) {
+        Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 background = new MediaPlayer(new Media(ssound1));

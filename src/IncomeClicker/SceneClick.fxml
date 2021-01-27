@@ -54,6 +54,8 @@
                   <Label fx:id="buffLabel2" layoutX="344.0" layoutY="169.0" prefHeight="17.0" prefWidth="142.0" />
                   <Label fx:id="buffLabel3" layoutX="344.0" layoutY="231.0" prefHeight="17.0" prefWidth="168.0" />
                   <Button fx:id="backmenu" layoutX="534.0" layoutY="332.0" mnemonicParsing="false" onAction="#backMenu" text="Menu" />
+                  <Button fx:id="mutebut" layoutX="398.0" layoutY="332.0" mnemonicParsing="false" onAction="#muteOnAction" text="Mute" />
+                  <Button fx:id="unmute" layoutX="457.0" layoutY="332.0" mnemonicParsing="false" onAction="#unmuteOnAction" text="Unmute" />
                </children></AnchorPane>
       </content>
     </Tab>
