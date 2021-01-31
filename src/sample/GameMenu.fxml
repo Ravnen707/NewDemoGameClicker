@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <ImageView fitHeight="352.0" fitWidth="647.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -22,12 +19,12 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="hANDm" layoutX="448.0" layoutY="233.0" mnemonicParsing="false" text="3. Settings">
+      <Button fx:id="hANDm" layoutX="14.0" layoutY="159.0" mnemonicParsing="false" text="99 for Settings">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="RiskyInvest" layoutX="232.0" layoutY="232.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="185.0" text="2. RiskyInvestoreV.1">
+      <Button fx:id="RiskyInvest" layoutX="22.0" layoutY="296.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="185.0" text="3. RiskyInvestoreV.1">
          <font>
             <Font size="18.0" />
          </font></Button>
@@ -37,7 +34,7 @@
          </font>
       </Label>
       <Label layoutX="14.0" layoutY="14.0" text="Version 1" />
-      <Button fx:id="incomeGame1" layoutX="25.0" layoutY="292.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="179.0" text="4. ChilasDipo VersionV.1">
+      <Button fx:id="incomeGame1" layoutX="223.0" layoutY="232.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="225.0" text="2. ChilasDipo VersionV.1">
          <font>
             <Font size="18.0" />
          </font>

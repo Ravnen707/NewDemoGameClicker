@@ -33,7 +33,7 @@ public class Controller {
             case 2:
                 Stage oldstage1 = (Stage) SearchBar.getScene().getWindow();
                 oldstage1.close();  // lukker gammel scene ned
-                Parent root1 = FXMLLoader.load(getClass().getResource("/RiskyInvestor/RiskyInvestor.fxml")); // kalder efter rigtige GUI.
+                Parent root1 = FXMLLoader.load(getClass().getResource("/ChilasDipo/code/sample.fxml")); // kalder efter rigtige GUI.
                 Stage stage1 = new Stage();
                 stage1.setScene(new Scene(root1));
                 stage1.show(); // Laver en ny Scene.
@@ -41,19 +41,20 @@ public class Controller {
             case 3:
                 Stage oldstage2 = (Stage) SearchBar.getScene().getWindow();
                 oldstage2.close(); // lukker gammel scene ned
-                Parent root2 = FXMLLoader.load(getClass().getResource("/MenuSet/MenuSettings.fxml")); // kalder efter rigtige GUI.
+                Parent root2 = FXMLLoader.load(getClass().getResource("/RiskyInvestor/RiskyInvestor.fxml")); // kalder efter rigtige GUI.
                 Stage stage2 = new Stage();
                 stage2.setScene(new Scene(root2));
                 stage2.show(); // Laver en ny Scene.
                 break;
-            case 4:
-                Stage oldstage3 = (Stage) SearchBar.getScene().getWindow();
-                oldstage3.close(); // lukker gammel scene ned
-                Parent root3 = FXMLLoader.load(getClass().getResource("/ChilasDipo/code/sample.fxml")); // kalder efter rigtige GUI.
-                Stage stage3 = new Stage();
-                stage3.setScene(new Scene(root3));
-                stage3.show(); // Laver en ny Scene.
+            case 99:
+                Stage oldstage99 = (Stage) SearchBar.getScene().getWindow();
+                oldstage99.close(); // lukker gammel scene ned
+                Parent root99 = FXMLLoader.load(getClass().getResource("/MenuSet/MenuSettings.fxml")); // kalder efter rigtige GUI.
+                Stage stage99 = new Stage();
+                stage99.setScene(new Scene(root99));
+                stage99.show(); // Laver en ny Scene.
                 break;
+
 
         }
     }
