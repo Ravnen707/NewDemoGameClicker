@@ -1,4 +1,4 @@
-package MenuSet;
+package MenuSettings;
 
 public class nr1 {
         public int tal;

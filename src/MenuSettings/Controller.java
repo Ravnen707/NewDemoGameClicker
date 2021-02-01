@@ -1,4 +1,4 @@
-package MenuSet;
+package MenuSettings;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -55,7 +55,7 @@ public class Controller {
     public void backMenu(ActionEvent actionEvent) throws IOException {
         Stage oldstage1 = (Stage) backmenu.getScene().getWindow();
         oldstage1.close();  // lukker gammel scene ned
-        Parent root1 = FXMLLoader.load(getClass().getResource("/sample/GameMenu.fxml")); // kalder efter rigtige GUI.
+        Parent root1 = FXMLLoader.load(getClass().getResource("/MainPackage/GameMenu.fxml")); // kalder efter rigtige GUI.
         Stage stage1 = new Stage();
         stage1.setScene(new Scene(root1));
         stage1.show(); // Laver en ny Scene.

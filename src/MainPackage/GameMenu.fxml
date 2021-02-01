@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainPackage.Controller">
    <children>
       <ImageView fitHeight="352.0" fitWidth="647.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../money/Accenture-Blockchain-Coins-768x432.jpg" />
+            <Image url="@../MoneyPicsForGamesAndMenu/Accenture-Blockchain-Coins-768x432.jpg" />
          </image>
       </ImageView>
       <TextField fx:id="SearchBar" layoutX="223.0" layoutY="116.0" onAction="#searchOnAction" />

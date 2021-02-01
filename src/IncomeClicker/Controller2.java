@@ -32,16 +32,16 @@ public class Controller2 {
     @FXML
     Label point;
     @FXML
-    Label buffLabel;
-    @FXML
-    Label buffLabel1;
-    @FXML
-    Label buffLabel2;
-    @FXML
-    Label buffLabel3;
-    String ssound = new File("src/money/Cash_Register_Sound_Effect-AudioTrimmer.com.mp3").toURI().toString();
+    Label buffLabel, buffLabel1, buffLabel2, buffLabel3;
+    //@FXML
+  //  Label buffLabel1;
+  //  @FXML
+  //  Label buffLabel2; Not in use anymore. found a cleaner way to list them (the one over these)
+  //  @FXML
+  //  Label buffLabel3;
+    String ssound = new File("src/MoneyPicsForGamesAndMenu/Cash_Register_Sound_Effect-AudioTrimmer.com.mp3").toURI().toString();
     private MediaPlayer background;
-    String ssound1 = new File("src/money/Magic Glitter - Fairy Dust Sound Effect.mp3").toURI().toString();
+    String ssound1 = new File("src/MoneyPicsForGamesAndMenu/Magic Glitter - Fairy Dust Sound Effect.mp3").toURI().toString();
     public Button backmenu;
     int buy1 = 1;
 
@@ -266,7 +266,7 @@ public class Controller2 {
     public void backMenu(ActionEvent actionEvent) throws IOException {
         Stage oldstage1 = (Stage) backmenu.getScene().getWindow();
         oldstage1.close();  // lukker gammel scene ned
-        Parent root1 = FXMLLoader.load(getClass().getResource("/sample/GameMenu.fxml")); // kalder efter rigtige GUI.
+        Parent root1 = FXMLLoader.load(getClass().getResource("/MainPackage/GameMenu.fxml")); // kalder efter rigtige GUI.
         Stage stage1 = new Stage();
         stage1.setScene(new Scene(root1));
         stage1.show(); // Laver en ny Scene.

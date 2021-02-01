@@ -1,4 +1,4 @@
-package sample;
+package MainPackage;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -49,7 +49,7 @@ public class Controller {
             case 99:
                 Stage oldstage99 = (Stage) SearchBar.getScene().getWindow();
                 oldstage99.close(); // lukker gammel scene ned
-                Parent root99 = FXMLLoader.load(getClass().getResource("/MenuSet/MenuSettings.fxml")); // kalder efter rigtige GUI.
+                Parent root99 = FXMLLoader.load(getClass().getResource("/MenuSettings/MenuSettings.fxml")); // kalder efter rigtige GUI.
                 Stage stage99 = new Stage();
                 stage99.setScene(new Scene(root99));
                 stage99.show(); // Laver en ny Scene.
